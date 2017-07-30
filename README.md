@@ -5,6 +5,16 @@ Impl for [OwlCarousel2]
 
 ### Installation
 
+##### NPM
+```ssh
+npm install --save owl.carousel
+```
+
+##### Bower
+```ssh
+bower install --save owl.carousel
+```
+
 ```ssh
 npm install angular-owl-carousel2
 ```
@@ -16,9 +26,30 @@ bower install angular-owl-carousel2
 
 ### Usage
 
+In Your Angular application include one module:
+
+```js
+angular.module('CarouselApp', ['angular-owl-carousel-2'])
+```
+
+In Your HTML Layout include an original Owl Carousel files and Angular Carousel 
+```html
+<!-- CSS -->
+<link rel="stylesheet" href="../bower_components/owl.carousel/dist/assets/owl.carousel.css">
+<link rel="stylesheet" href="../bower_components/owl.carousel/dist/assets/owl.theme.default.css">
+
+<!-- JS -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/owl.carousel/dist/owl.carousel.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+
+<script src="../src/angular-owl-carousel-2.js"></script>
+```
+
 ```js
 $scope.items = [1, 2, 3, 4, 5, 6, 7, 8];
-
+    let owlApi;
+    
     $scope.properties = {
         items: 2,
         onChange: function () {
